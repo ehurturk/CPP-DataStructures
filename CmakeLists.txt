@@ -7,7 +7,7 @@ set (PROJECT_SOURCES ${CMAKE_SOURCE_DIR}/src/main.cpp )
 set (PROJECT_HEADERS ${CMAKE_SOURCE_DIR}/include/LinkedList.h
                      ${CMAKE_SOURCE_DIR}/include/Stack.h
                      ${CMAKE_SOURCE_DIR}/include/Queue.h
-                     ${CMAKE_SOURCE_DIR}/include/BinaryTree.h)
+                     ${CMAKE_SOURCE_DIR}/include/Collections.h)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 

@@ -6,37 +6,20 @@
 #define LOG(x) std::cout << x << std::endl;
 
 template <typename T>
-class Queue {
+class Queue : public Collections<T> {
 
 public:
-    Node<T>* head = NULL;
     Node<T>* tail = NULL;
 
-    void traverse()
-    {
-        if (head == NULL) {
-            return;
-        }
-        Node<T>* temp = head;
-        while (temp != tail)
-        {
-            LOG(temp->data);
-            temp = temp->next;
-        }
 
-        LOG(temp->data);
-
-    }
-
-    T add(T obj)
+    T push(T obj)
     {
         Node<T>* newNode = (Node<T>*) malloc(sizeof(Node<T>));
         newNode->data = obj;
 
-        if (head == NULL || tail == NULL)
+        if (this->head == NULL || tail == NULL)
         {
-            // LOG("Head or tail is null.");
-            head = newNode;
+            this->head = newNode;
             tail = newNode;
             return obj;
         }
@@ -47,13 +30,30 @@ public:
     }
 
     T pop() {
-        
-        T obj = head->data;
-        Node<T>* temp = head;
-        head = head->next;
+
+        T obj = this->head->data;
+        Node<T>* temp = this->head;
+        this->head = this->head->next;
         temp->next = NULL;
         delete temp;
 
         return obj;
     }
+
+    void traverse() override
+    {
+        if (this->head == NULL) {
+            return;
+        }
+        Node<T>* temp = this->head;
+        while (temp != tail)
+        {
+            LOG(temp->data);
+            temp = temp->next;
+        }
+
+        LOG(temp->data);
+    }
+
+
 };

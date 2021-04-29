@@ -1,23 +1,21 @@
 #pragma once
 #include <iostream>
 #include "Node.h"
-#define LOG(x) std::cout << x << std::endl;
+#include "Collections.h"
 
 template <typename T>
-class LinkedList {
+class LinkedList : public Collections<T> {
 public:
-    Node<T>* head = NULL;
-    
-    T add(T obj) {
+    T push(T obj) {
         Node<T>* newNode = (Node<T>*) malloc(sizeof(Node<T>));
         newNode->data = obj;
         newNode->next = NULL;
-        if (head == NULL) {
-            head = newNode;
+        if (this->head == NULL) {
+            this->head = newNode;
             return obj;
         }
 
-        Node<T>* temp = head;
+        Node<T>* temp = this->head;
         while (temp->next != NULL) {
             temp = temp->next;
         }
@@ -27,12 +25,5 @@ public:
 
     }
 
-    void traverse() {
-        Node<T>* temp = head;
-        while (temp->next != NULL) {
-            std::cout << temp->data << " ";
-            temp = temp->next;
-        }
-        LOG(temp->data);
-    }
+
 };
