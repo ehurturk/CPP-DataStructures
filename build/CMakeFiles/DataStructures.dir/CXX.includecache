@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../include/Collections.h
+Node.h
+../include/Node.h
+iostream
+-
+
 ../include/LinkedList.h
 iostream
 -
 Node.h
 ../include/Node.h
+Collections.h
+../include/Collections.h
 
 ../include/Node.h
 
@@ -25,10 +33,10 @@ iostream
 -
 Node.h
 ../include/Node.h
+Collections.h
+../include/Collections.h
 
 /mnt/d/Dev/C++/DataStructures/src/main.cpp
-iostream
--
 Stack.h
 /mnt/d/Dev/C++/DataStructures/src/Stack.h
 LinkedList.h
