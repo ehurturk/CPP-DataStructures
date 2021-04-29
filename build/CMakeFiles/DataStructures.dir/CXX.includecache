@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/LinkedList.h
+iostream
+-
+Node.h
+../include/Node.h
+
+../include/Node.h
+
+../include/Queue.h
+iostream
+-
+Node.h
+../include/Node.h
+
+../include/Stack.h
+iostream
+-
+Node.h
+../include/Node.h
+
+/mnt/d/Dev/C++/DataStructures/src/main.cpp
+iostream
+-
+Stack.h
+/mnt/d/Dev/C++/DataStructures/src/Stack.h
+LinkedList.h
+/mnt/d/Dev/C++/DataStructures/src/LinkedList.h
+Queue.h
+/mnt/d/Dev/C++/DataStructures/src/Queue.h
+
